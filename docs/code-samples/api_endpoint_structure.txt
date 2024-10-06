@@ -1,0 +1,4 @@
+# API Endpoint Structure
+
+- GET /projects: Retrieves a list of available projects.
+- POST /projects/:id/export: Triggers the export of the selected

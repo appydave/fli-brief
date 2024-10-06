@@ -1,0 +1,27 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header, .footer {
+  padding: 1rem;
+  background-color: #f0f0f0;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+.left-panel, .right-panel {
+  width: 250px;
+  padding: 1rem;
+  background-color: #e0e0e0;
+}
+
+.central-grid {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}

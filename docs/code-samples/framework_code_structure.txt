@@ -1,0 +1,1 @@
+# Text-based code structure for the dockable UI framework

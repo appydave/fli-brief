@@ -1,0 +1,11 @@
+{
+  "project_name": "Sample Project",
+  "selected_images": [
+    {
+      "concept_id": "vc1",
+      "images": [
+        {"image_id": "img2", "file_path": "/path/to/image2.jpg", "order": 1}
+      ]
+    }
+  ]
+}

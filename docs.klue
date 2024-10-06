@@ -1,0 +1,130 @@
+documentation do
+  doc :index do
+    description "Central directory to navigate all FlyBrief documents"
+  end
+
+  section :requirements do
+    description "Core requirements for FlyBrief"
+
+    doc :ux_requirements do
+      description "User experience requirements, including the dockable UI and user interactions"
+    end
+
+    doc :functional_requirements do
+      description "Specific functional features such as header, panels, and image selection"
+    end
+
+    doc :non_functional_requirements do
+      description "Performance, security, and other non-functional requirements"
+    end
+
+    doc :data_structure do
+      description "Overview of data structure, including links to JSON definitions"
+    end
+
+    doc :components_list do
+      description "List of components and their descriptions"
+    end
+  end
+
+  section :design do
+    description "Design and interaction patterns"
+
+    doc :ui_flow_diagram do
+      description "User interaction flows and navigation patterns"
+    end
+
+    doc :interaction_design do
+      description "Details on user interaction such as drag-and-drop image reordering"
+    end
+
+    doc :branding_guidelines do
+      description "Color palette, typography, and style guidelines for maintaining a consistent brand"
+    end
+
+    section :wireframes do
+      description "Visual wireframes for the FlyBrief UI"
+      
+      doc :dockable_panels_wireframe do
+        description "Wireframe for the dockable panel layout"
+      end
+    end
+  end
+
+  section :development do
+    description "Technical specifications for implementing FlyBrief"
+
+    doc :dockable_ui_framework_specs do
+      description "Specifications for the reusable dockable UI framework"
+    end
+
+    doc :data_handling_design do
+      description "Design for handling data loading and export in JSON"
+    end
+
+    doc :api_endpoints do
+      description "API endpoint structure for data interaction"
+    end
+  end
+
+  section :code_samples do
+    description "Code blocks and examples for FlyBrief"
+
+    doc :load_data_structure_json do
+      description "JSON structure for loading project data"
+    end
+
+    doc :export_data_structure_json do
+      description "JSON structure for exporting project data"
+    end
+
+    doc :framework_code_structure do
+      description "Text-based code structure for the dockable UI framework"
+    end
+
+    doc :api_endpoint_structure do
+      description "Text-based code structure for API endpoints"
+    end
+  end
+end
+
+gpt_context -i 'docs/documentation-index.md' \
+            -i 'docs/requirements/*.md' \
+            -i 'docs/design/*.md' \
+            -i 'docs/development/*.md' \
+            -d
+
+
+gpt_context \
+  -i 'docs/**/*.md' \
+  -i 'docs/**/*.json' \
+  -i 'docs/**/*.txt' \
+  -i 'docs/**/*.png' \
+  -d -f tree
+
+
+# Directory structure for FlyBrief documentation
+/docs
+├── documentation-index.md                # Central directory to navigate all FlyBrief documents
+├── requirements/
+│   ├── ux-requirements.md                # User experience requirements (dockable UI and interaction patterns)
+│   ├── functional-requirements.md        # Functional requirements (header, panels, image selection)
+│   ├── non-functional-requirements.md    # Non-functional requirements (performance, security)
+│   ├── data-structure.md                 # Overview of the data structure for FlyBrief
+│       └── load_data_structure.json      # JSON structure for loading project data
+│       └── export_data_structure.json    # JSON structure for exporting project data
+├── design/
+│   ├── ui-flow-diagram.md                # User interaction flows and navigation
+│   ├── interaction-design.md             # Interaction details like drag-and-drop image reordering
+│   └── wireframes/                     
+│       ├── dockable-panels-wireframe.png # Visual wireframe for the dockable panel layout
+├── development/
+│   ├── dockable-ui-framework-specs.md    # Specifications for the dockable UI framework
+│   ├── data-handling-design.md           # Design for handling data (loading/export)
+│   ├── api-endpoints.md                  # API endpoint structure
+│       └── api_endpoint_structure.txt    # Text-based structure for API endpoints
+├── code-samples/
+│   ├── load_data_structure.json          # JSON structure for loading data (code block moved to its own file)
+│   ├── export_data_structure.json        # JSON structure for exporting data (code block moved to its own file)
+│   ├── framework_code_structure.txt      # Text-based code structure for dockable UI framework
+│   └── api_endpoint_structure.txt        # Text-based structure for API endpoints

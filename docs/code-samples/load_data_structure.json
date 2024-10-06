@@ -1,0 +1,22 @@
+{
+  "project_name": "Sample Project",
+  "sections": {
+    "intro": [],
+    "content": [],
+    "outro": []
+  },
+  "visual_concepts": [
+    {
+      "concept_id": "vc1",
+      "description": "A quick brown fox jumps over the lazy dog",
+      "prompts": {
+        "original": "A fox jumping over a dog",
+        "enhanced": "A swift fox leaps gracefully over a sleeping dog"
+      },
+      "images": [
+        {"image_id": "img1", "file_path": "/path/to/image1.jpg", "selected": false},
+        {"image_id": "img2", "file_path": "/path/to/image2.jpg", "selected": true}
+      ]
+    }
+  ]
+}
